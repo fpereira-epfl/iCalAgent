@@ -209,3 +209,6 @@ __marimo__/
 # Project specific
 .DS_Store
 .vscode
+data/*/
+.venv*
+payload.txt

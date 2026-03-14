@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "icalagent"
+version = "0.1.0"
+description = "Scrape agenda pages, parse events with GPT, and export calendar files."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "beautifulsoup4>=4.12.0",
+  "requests>=2.31.0",
+  "openai>=1.0.0",
+  "python-dotenv>=1.0.0",
+  "rich>=13.0.0",
+]
+
+[project.scripts]
+icalagent = "icalagent.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["icalagent*"]
